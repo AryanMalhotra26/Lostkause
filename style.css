@@ -1,0 +1,114 @@
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #f0f0f0;
+    --accent-color: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.5s;
+}
+
+.brand-name {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    letter-spacing: 0.5em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fff, #aaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.brand-name:hover {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+    transform: scale(1.05);
+}
+
+.teaser-text {
+    font-size: 1.2rem;
+    letter-spacing: 0.8em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    transition: all 0.5s ease;
+    cursor: default;
+}
+
+.teaser-text:hover {
+    letter-spacing: 1em;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.loader-line {
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 0 auto;
+    animation: expandLine 1.5s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes expandLine {
+    to {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 2.5rem;
+        letter-spacing: 0.3em;
+    }
+
+    .teaser-text {
+        font-size: 1rem;
+        letter-spacing: 0.5em;
+    }
+}
