@@ -51,6 +51,7 @@ body {
     text-transform: uppercase;
     background: linear-gradient(to right, #fff, #aaa);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
     transition: all 0.3s ease;
@@ -105,10 +106,26 @@ body {
     .brand-name {
         font-size: 2.5rem;
         letter-spacing: 0.3em;
+        /* Stronger default glow for mobile */
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+        /* Pulse animation */
+        animation: glowPulse 3s infinite alternate;
     }
 
     .teaser-text {
         font-size: 1rem;
         letter-spacing: 0.5em;
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+        transform: scale(1);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8));
+        transform: scale(1.02);
     }
 }
