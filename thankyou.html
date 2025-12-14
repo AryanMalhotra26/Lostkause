@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOST KAUSE | Welcome</title>
+    <meta name="robots" content="noindex">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Hurricane&family=Montserrat:wght@300;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-btn {
+            text-decoration: none;
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--text-color);
+            padding: 10px 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+            display: inline-block;
+            opacity: 0;
+            animation: fadeInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            animation-delay: 1s;
+        }
+
+        .back-btn:hover {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .message {
+            font-size: 1.2rem;
+            letter-spacing: 0.3em;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            animation-delay: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <main class="container">
+        <div class="content">
+            <h1 class="brand-name">LOST KAUSE</h1>
+            <p class="message">YOU ARE ON THE LIST</p>
+            <div class="loader-line"></div>
+            <a href="index.html" class="back-btn">BACK TO HOME</a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

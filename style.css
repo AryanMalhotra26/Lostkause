@@ -102,6 +102,75 @@ body {
     }
 }
 
+/* Waitlist Form Styles */
+.waitlist-form {
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.8s;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.waitlist-form input[type="email"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--accent-color);
+    padding: 10px 0;
+    width: 300px;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.1em;
+}
+
+.waitlist-form input[type="email"]::placeholder {
+    color: #555;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    transition: all 0.3s ease;
+}
+
+.waitlist-form input[type="email"]:focus {
+    border-bottom-color: #fff;
+    width: 320px;
+}
+
+.waitlist-form input[type="email"]:focus::placeholder {
+    opacity: 0;
+}
+
+.waitlist-form button {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+    padding: 10px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.waitlist-form button:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
     .brand-name {
         font-size: 2.5rem;
